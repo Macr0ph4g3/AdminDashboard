@@ -46,17 +46,23 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+/* end of css reset */
+@font-face {
+    font-family: "Roboto";
+    src: url(/Fonts/Roboto-Bold.ttf) format("woff")
+}
 
 .webcontainer {
     display:grid;
     grid-template-columns: 1fr 6fr;
     height: 100vh;
     width: 100vw;
+    font-family: "Roboto";
 }
 .leftpanel {
     padding-left: 25px;
     font-size: 1.5em;
+
 }
 .leftpanel img {
     height: 35px;
@@ -96,6 +102,13 @@ table {
     display: grid;
     grid-template-rows: 1fr 6fr;
     min-width: 200px;
+    color: white;
+    font-weight: 700;
+}
+.leftpanel img {
+    filter: invert(100%) sepia(5%) saturate(22%) hue-rotate(123deg) brightness(104%) contrast(104%);
+
+
 }
 
 .rightpanel {
@@ -106,9 +119,17 @@ table {
 .spacer {
     grid-row: 1 / 4;
     grid-column: 1 / 2;
+    background-color: #1992D4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.spacer .blue {
     background-color: #1992D4
 }
+.spacer .white {
+    background-color: #FFFFFF
 
+}
 .header {
     background-color: white;
     display: grid;
@@ -120,8 +141,11 @@ table {
     display: flex;
     flex-grow: 1;
     align-items: center;
-    
+    padding-left: 100px;
 
+}
+.navbar img {
+    padding-right: 15px
 }
 .navbar input{
     display: flex;
@@ -139,24 +163,34 @@ table {
     grid-template-columns: 2fr 1fr;
     align-items: center;
     padding-left: 50px;
-
-
+    font-size: 1.5em;
+    font-weight: 700;
 }
+
+
 .leftUC {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 5px;
 }
 .leftUC .bigPhoto {
     height:100px;
     grid-column: 1 / 1;
-    grid-row: 1 / 4;
+    grid-row: 1 / 3;
 }
 .leftUC h5 {
-    grid-row: 2 / 3;
+    grid-row: 1 / 2;
+    font-size: .60em;
+    font-weight: 700;
+    align-self: end;
+
+
 }
 .leftUC h1 {
-    grid-row: 3 / 4
+    grid-row: 2 / 4;
+    align-self: start;
 }
 .rightUC {
     display: flex;
@@ -175,7 +209,7 @@ table {
 }
 .maincontainer{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3fr 320px;
     background-color:#E2E8F0;
     padding-left: 10px;
     gap: 20px;
@@ -200,7 +234,7 @@ table {
     background-color: white;
     position: relative;	
     box-shadow: 2px 7px 5px 0px #828A8C, 
-    inset 15px 1px 6px -5px #A83C70;
+    inset 13px 0px 0px -5px #A83C70;
     height: 200px;
     width: 450px;
     display: flex;
@@ -250,15 +284,17 @@ table {
     display: grid;
     grid-template-rows: 60px 1fr;
 }
-.trendingDescrip {
+.trendingBody {
     border-radius: 15px;
     background-color: white;
-display: grid;
+    display: grid;
+    box-shadow: 3px 6px 5px 0px #B5B5B5;
+
 }
 .trending {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 75px 2fr;
+    grid-template-rows: 37.5fr 37.5fr;
 }
 
 .trendingPhoto {
