@@ -51,69 +51,221 @@ table {
 .webcontainer {
     display:grid;
     grid-template-columns: 1fr 6fr;
-    background-color: aqua;
     height: 100vh;
     width: 100vw;
 }
+.leftpanel {
+    padding-left: 25px;
+    font-size: 1.5em;
+}
+.leftpanel img {
+    height: 35px;
+    padding-right: 20px;
+}
+
+.leftpanel li{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+
+}
+.space {
+    padding-top: 65px;
+}
+.rightpanel img {
+    height: 35px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 50px;
+}
+.profile div{
+    padding-right:20px;
+}
+.rightpanel .profilephoto {
+    height: 45px;
+    border-radius: 100px;
+}
+
 
 .leftpanel {
-    background-color: aquamarine;
+    background-color: #1992D4;
     display: grid;
     grid-template-rows: 1fr 6fr;
-
+    min-width: 200px;
 }
 
 .rightpanel {
-    background-color: blue;
     display: grid;
     grid-template-columns: 25px 1fr;
-    grid-template-rows: 1fr 1fr 8fr;
+    grid-template-rows: 95px 95px 8fr;
 }
 .spacer {
     grid-row: 1 / 4;
     grid-column: 1 / 2;
-    background-color:brown
+    background-color: #1992D4
 }
 
 .header {
-    background-color: blueviolet;
+    background-color: white;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 4fr 1fr;
+
 }
 .navbar {
     display: flex;
     flex-grow: 1;
+    align-items: center;
+    
+
 }
 .navbar input{
     display: flex;
     flex-grow: 1;
+    align-self:center;
     height: 25px;
     border-radius: 10px;
     border: none;
-    padding-left: 8px;
+    max-width: 600px;
+    background-color: #cbd1d8;
+}
+.usercontrol {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    padding-left: 50px;
+
+
+}
+.leftUC {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.leftUC .bigPhoto {
+    height:100px;
+    grid-column: 1 / 1;
+    grid-row: 1 / 4;
+}
+.leftUC h5 {
+    grid-row: 2 / 3;
+}
+.leftUC h1 {
+    grid-row: 3 / 4
+}
+.rightUC {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.rightUC input {
+    background-color: #1992D4;
+    height: 35px;
+    width: 90px;
+    border-radius: 25px;
+    color: white;
+    border: none;
 }
 .maincontainer{
     display: grid;
-    grid-template-columns: 4fr 1fr;
-    background-color:darkcyan
+    grid-template-columns: 3fr 1fr;
+    background-color:#E2E8F0;
+    padding-left: 10px;
+    gap: 20px;
+
 }
 
 .maincontainerLeft {
     display: grid;
-  grid-template-rows: 1fr 15fr;
+  grid-template-rows: 60px 1fr;
+  gap: 10px;
+
 }
 .projects {
     display: grid;
+    gap: 1rem;
     grid-template-columns: 
-    repeat(auto-fit, minmax(250px, 1fr));
+    repeat(auto-fit, minmax(450px, 1fr)); 
+    /* THIS IS WHAT IS CAUSING THE SCROLLBAR */
+}
+.project {
+    border-radius: 10px;
+    background-color: white;
+    position: relative;	
+    box-shadow: 2px 7px 5px 0px #828A8C, 
+    inset 15px 1px 6px -5px #A83C70;
+    height: 200px;
+    width: 450px;
+    display: flex;
+    padding-left: 15px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.projectheader {
+    display: flex;
+}
+.projectinfo {
+    display: flex;
+
+}
+.projectbuttons {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 25px;
+    height: 55px;
+}
+.project img {
+    padding-right: 15px
 }
 .mainright {
     display: grid;
     grid-template-rows: 7fr 7fr;
+    min-width: 50px;
+
 }
 
-.mainheader2 {
+.announcement {
     display: grid;
-  grid-template-rows: 1fr 6fr;
+  grid-template-rows: 60px 1fr;
+  gap: 10px;
+  
+}
+.mainHeader {
+    align-self: end;
+    font-size: 1.5em;
+
+}
+.announcementcontainer {
+    border-radius: 15px;
+    background-color: white;
+}
+.trendingcontainer {
+    display: grid;
+    grid-template-rows: 60px 1fr;
+}
+.trendingDescrip {
+    border-radius: 15px;
+    background-color: white;
+display: grid;
+}
+.trending {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.trendingPhoto {
+    grid-column: 1 / 1;
+    grid-row: 1 / 3;
+}
+
+.trendingPhoto img {
+    height: 75px;
 }
